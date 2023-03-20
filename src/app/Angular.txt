@@ -1,0 +1,31 @@
+-> Started building an app.
+-> ngModel to dynamic enter into the input field.
+-> Angular starts with the main.ts file and then it refer to the app module file. Where in app module file it tells about
+   the components file which angular should use.
+-> New component is created and it is then added to the app.module file in declarations.
+-> I will give a selector to that component which I can use in any html file as <app-server></app-server>.
+-> ng g c component-name this command will create a new component in your app with the name provided. 
+-> You can add components inside a component my just writing the component selector in a other component html files., 
+-> If you want something to return from the Typescript to show on html file you will initialize a variable that is
+   to be transferred and in html you will write that variable name as {{ serverid }} you can also call a certain
+   function that returns the string or id anything just write name in braces.
+-> If we use [attribute] = "" this will bind the property attribute define in our typescript. So if you want to disable
+   an enable button after certain time you will tell that attribute first enable than set time in typescript to disable the
+   after certain time.
+-> Event binding is used with parathensis like (click)="functionName()".In functionName just perform operation you want in
+   typescript.
+-> In eventbinding if you want to pass data to typescript like we want something to be written on input to show on screen. 
+   We will do as (input)="fncName($event)". In typescript you will get as 
+   fncName(event:Event){ this.componentname = (HTMLInputElement>event.target).value} 
+-> If we use ngmodel as [(ngmodel)] what it is doing it is first assigning a property to a value in compnent class. So when
+   we update something in component is changes in view. And then is binding input event to the value that if something is 
+   changed in the component class the effects are in component class value to which it is bind.
+
+-> *ngif is used to specify to show certain html element or action. *ngif="valueInTypescript"
+-> You can also perform certain operation other than if until if is true using else. *ngif="valueInTypescript": else value
+   <ng-template #value>Any action or element</ng-template>
+-> ngStyle is used to style the elements dynamically. So if you want to give color to element according to their name
+   [ngStyle]="{backgroundColor:getcolor()}" and you can return color in typescript according to the name value.
+-> If you are providing css class to a component and want to add it at a certain condition you can do it using the 
+   [ngclass]="{classname: status === 'online'}"
+-> if you want to print a list of elements in an array you have to call ngfor. *ngFor = "let recipe of arrayname"
