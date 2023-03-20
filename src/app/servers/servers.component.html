@@ -1,12 +1,5 @@
-<div class="Form">
-    <form >
-        <label id="Name">Name</label><br><input [(ngModel)]="Name" ><br>
-        <label id="Id">Id</label><br><input [(ngModel)]="ServerId" ><br>
-        <label id="status">Status</label><br>
-        <select id="status" name="Status">
-          <option [(ngModel)]="Status" value="Online">Online</option>
-          <option [(ngModel)]="Status" value="Offline">Offline</option>
-        </select><br><br>
-        <button (click)="OnSubmit()">Submit</button>
-    </form>
+<div class="Output">
+    <p *ngIf="data"> Name:{{data.Name}}</p>
+    <p *ngIf="data">ServerId:{{data.ServerId}}</p>
+    <p *ngIf="data"> Status:{{data.Status}}</p>
 </div>

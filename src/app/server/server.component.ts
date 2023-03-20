@@ -8,12 +8,5 @@ import { ServerModule } from "./server.module";
 })
 export class ServerComponent
 {
-    
-    Name = "";
-    ServerId = 0;
-    Status = "";
-    OnSubmit()
-    {
-        const server = new ServerModule(this.Name = this.Name,this.ServerId = this.ServerId, this.Status = this.Status)
-    }
+
 }

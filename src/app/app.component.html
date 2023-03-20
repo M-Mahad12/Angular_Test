@@ -1,7 +1,19 @@
 <div style="display: flex;flex-direction: column;">
-<app-server></app-server>
-<div class="Output">
-    <h3>Servers List</h3>
-    <p><app-server ></app-server></p>
-</div>
+    <div class="Form">
+        <form >
+            <label id="Name">Name</label><br><input [(ngModel)]="Name" name="Name" ><br>
+            <label id="Id">Id</label><br><input [(ngModel)]="ServerId" name="ServerId"><br>
+            <label id="status">Status</label><br>
+            <select id="status" name="Status" [(ngModel)]="Status">
+                <option value="Online" selected>Online</option>
+                <option value="Offline">Offline</option>
+              </select>
+              
+            <br><br>
+            <button (click)="OnSubmit()">Submit</button>
+        </form>
+    </div>
+    <div class="Output">
+        <app-servers [data]="server"></app-servers>
+    </div>
 </div>

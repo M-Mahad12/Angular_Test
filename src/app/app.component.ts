@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  name = 'Mahad';
+    Name = "";
+    ServerId = 2;
+    Status = "";
+    server:any = [];
+    @Output() SendData = new EventEmitter<any>()
+    OnSubmit() {
+      this.server = {
+        Name: this.Name,
+        ServerId: this.ServerId,
+        Status: this.Status
+      };
+      this.SendData.emit(this.server);
+    }
 }
